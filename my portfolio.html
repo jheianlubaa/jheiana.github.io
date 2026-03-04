@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jheian B. Lubas | Frontend Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="my portfolio.css" />
+</head>
+
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="navbar">
+    <div class="logo">WELCOME</div>
+
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="hero-container">
+
+      <!-- TEXT -->
+      <div class="hero-content">
+        <h1>Hi, I'm <span>Jheian B. Lubas</span></h1>
+        <p class="subtitle">Frontend Developer • Web Designer • IT Student</p>
+        <p>
+          I build modern, responsive, and user-friendly websites.
+          I love turning ideas into real websites.
+        </p>
+        <a href="#projects" class="btn">View My Work</a>
+      </div>
+
+      <!-- PROFILE PHOTO -->
+      <div class="hero-image">
+        <!-- 🔥 TO CHANGE PHOTO:
+             1. Put your photo inside "images" folder
+             2. Name it profile.jpg
+             3. Replace this file later with your real one
+        -->
+        <img src="images/profile.jpg" alt="Jheian Lubas Photo">
+      </div>
+
+    </div>
+  </header>
+
+  <!-- ABOUT -->
+  <section id="about" class="section">
+    <h2>About Me</h2>
+    <p>
+      Hello! I'm Jheian, a passionate frontend developer currently studying Information Technology.
+      I enjoy designing and building clean websites that work on all devices.
+    </p>
+    <p>
+      My goal is to become a professional web developer and create meaningful digital experiences.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section">
+    <h2>My Skills</h2>
+    <div class="skills-container">
+      <ul>
+        <li>HTML5</li>
+        <li>CSS3</li>
+        <li>JavaScript (Beginner)</li>
+        <li>Responsive Web Design</li>
+        <li>Basic UI/UX Design</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section">
+    <h2>Projects</h2>
+
+    <div class="projects-container">
+      <div class="project-card">
+        <h3>Personal Portfolio Website</h3>
+        <p>
+          A responsive personal portfolio website built using HTML and CSS.
+          It showcases my skills, projects, and contact information.
+        </p>
+      </div>
+
+      <div class="project-card">
+        <h3>Simple Landing Page</h3>
+        <p>
+          A clean landing page design created for practice.
+          Focused on layout structure and responsive design.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section id="services" class="section">
+    <h2>What I Can Do</h2>
+
+    <div class="services-container">
+      <div class="service-card">
+        <h3>Website Design</h3>
+        <p>I design clean and modern website layouts.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Responsive Design</h3>
+        <p>Your website will work perfectly on mobile, tablet, and desktop.</p>
+      </div>
+
+      <div class="service-card">
+        <h3>Frontend Development</h3>
+        <p>I build websites using HTML, CSS, and basic JavaScript.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <p>If you'd like to work together or have any questions, feel free to message me!</p>
+    <a href="socials.html" class="btn">Social Links</a>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>© 2026 Jheian B. Lubas. All rights reserved.</p>
+    <p>Built with ❤️ using HTML & CSS</p>
+  </footer>
+
+  <!-- SCROLL ANIMATION SCRIPT (YOUR ORIGINAL, CLEANED) -->
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const sections = document.querySelectorAll(".section");
+
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      }, { threshold: 0.15 });
+
+      sections.forEach(section => {
+        observer.observe(section);
+      });
+    });
+  </script>
+
+</body>
+</html>
